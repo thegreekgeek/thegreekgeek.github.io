@@ -1,0 +1,18 @@
+{  
+    "subject": "acct:@blog@tilde.club/~thegreekgeek",
+    "aliases": [
+      "http://tilde.club/~thegreekgeek/@blog"
+    ],
+    "links": [
+      {
+        "rel": "self",
+        "type": "application/activity+json",
+        "href": "http://tilde.club/~thegreekgeek/@blog"
+      },
+      {
+        "rel":"http://webfinger.net/rel/profile-page",
+        "type":"text/html",
+        "href":"http://tilde.club/~thegreekgeek/"
+      }
+    ]
+}

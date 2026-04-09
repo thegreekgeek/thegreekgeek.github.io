@@ -1,0 +1,499 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Our remix on glitch button */
+.btn--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #d0fff1;
+}
+
+/* Navigation grid */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.header a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: var(--fg-0);
+  text-decoration: none;
+  border-style: none;
+}
+
+.header a:hover {
+  background: var(--blue);
+  color: var(--br-blue);
+}
+
+.header .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+/* Page structure */
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-0);
+}
+
+.wrapper {
+  min-height: var(--wrapper-height);
+  place-items: center;
+  margin: 3rem 2rem 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Layout: Home */
+.home {
+  justify-content: left;
+}
+
+.illo-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.illustration {
+  max-width: 180px;
+  max-height: var(--image-max-width);
+  margin-top: 1rem;
+  margin-right: 2rem;
+  transform: rotate(16deg);
+}
+
+/* Post */
+.post {
+  place-items: normal;
+}
+
+.controls {
+  margin: 3rem 0 2rem;
+}
+
+details {
+  color: var(--blue);
+}
+
+/* note */
+.note {
+  place-items: normal;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: nowrap; /* Items stay on one line by default */
+  justify-content: space-around;
+  padding: 5px
+}
+
+/* New page layout specific stuff */
+/* user styles */
+
+/* styles are what change the color and sizes of stuff on your site. */
+
+/* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+/* below this line is CSS for the layout */
+
+/* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+/* the "container" is what wraps your entire website */
+/* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+
+#container {
+  max-width: 900px;
+  /* this is the width of your layout! */
+  /* if you change the above value, scroll to the bottom
+    and change the media query according to the comment! */
+  margin: 0 auto;
+  /* this centers the entire page */
+}
+
+/* the area below is for all links on your page
+  EXCEPT for the navigation */
+#container a {
+  /* color: #ed64f5; */
+  font-weight: bold;
+  /* if you want to remove the underline
+    you can add a line below here that says:
+    text-decoration:none; */
+}
+
+#header {
+  width: 100%;
+  /* background-color: #5e4e8c; */
+  /* header color here! */
+  height: 150px;
+  /* this is only for a background image! */
+  /* if you want to put images IN the header, 
+    you can add them directly to the <div id="header"></div> element! */
+  background-image: var(--header-image);
+  background-size: 100%;
+}
+
+/* navigation section!! */
+#navbar {
+  height: auto;
+  min-height: 40px;
+  background-color: var(--bg-1);
+  /* navbar color */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Hide toggle checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Style hamburger label */
+.menu-label {
+  display: none; /* Hidden on desktop (>900px) */
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 10px;
+  background-color: var(--bg-2);
+  border: 1px solid var(--fg-0);
+  border-radius: 4px;
+  flex-direction: column; /* Stack spans vertically */
+}
+
+.menu-label span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  margin: 4px 0;
+}
+
+.hamburger-icon {
+}
+
+.menu-label::after {
+  color: #ffffff;
+  font-size: 0.8rem;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+#navbar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+#navbar li {
+  padding-top: 10px;
+}
+
+/* navigation links*/
+#navbar li a {
+  /* color: #ed64f5; */
+  /* navbar text color */
+  font-weight: 800;
+  text-decoration: none;
+  /* this removes the underline */
+}
+
+/* navigation link when a link is hovered over */
+#navbar li a:hover {
+  /* color: #a49cba; */
+  text-decoration: underline;
+}
+
+#flex {
+  display: flex;
+}
+
+/* this colors BOTH sidebars
+  if you want to style them separately,
+  create styles for #leftSidebar and #rightSidebar */
+aside {
+  background-color: var(--bg-1);
+  width: 200px;
+  padding: 20px;
+  font-size: smaller;
+  /* this makes the sidebar text slightly smaller */
+}
+
+/* this is the color of the main content area,
+  between the sidebars! */
+main {
+  background-color: var(--bg-2);
+  flex: 1;
+  padding: 20px;
+  order: 2;
+  min-width: 0; /* Allow flex item to shrink below content size */
+}
+
+/* what's this "order" stuff about??
+  allow me to explain!
+  if you're using both sidebars, the "order" value
+  tells the CSS the order in which to display them.
+  left sidebar is 1, content is 2, and right sidebar is 3! */
+
+#leftSidebar {
+  order: 1;
+}
+
+#rightSidebar {
+  order: 3;
+}
+
+footer {
+  /* background-color: #13092d; */
+  /* background color for footer */
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  /* this centers the footer text */
+}
+
+h1,
+h2,
+h3 {
+  /* color: #ed64f5; */
+}
+
+h1 {
+  font-size: 25px;
+}
+
+strong {
+  /* this styles bold text */
+  color: #ed64f5;
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+  /* background-color: #13092d; */
+  /* border: 1px solid #ed64f5; */
+  padding: 10px;
+}
+
+/* CSS for extras */
+
+#topBar {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  font-size: smaller;
+  /* background-color: #13092d; */
+}
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+  by default, the container width is 900px.
+  in order to keep things responsive, take your new height,
+  and then subtrack it by 100. use this new number as the 
+  "max-width" value below
+  */
+
+@media only screen and (max-width: 800px) {
+  #flex {
+    flex-wrap: wrap;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  /* the order of the items is adjusted here for responsiveness!
+    since the sidebars would be too small on a mobile device.
+    feel free to play around with the order!
+    */
+  main {
+    order: 1;
+  }
+
+  #leftSidebar {
+    order: 2;
+  }
+
+  #rightSidebar {
+    order: 3;
+  }
+
+  #navbar ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* feed */
+
+div.properties__row  {
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    min-height: 1.5rem;
+    max-height: 4rem;
+}
+
+p.properties {
+    padding-top: 0 !important;
+}
+
+.icon {
+    color: var(--color-secondary);
+    position: relative;
+}
+
+svg.feather {
+    height: 1.25rem;
+}
+
+ul#feed__ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    max-width: var(--content-width);
+    min-width: 100%;
+}
+
+li.feed__li {
+    list-style-type: none;
+    position: relative;
+    margin: var(--item-margin) 0;
+    margin-bottom: calc(var(--item-margin) * 2);
+    z-index: 2;
+}
+
+div.feed__content {
+    overflow: hidden;
+    word-wrap: break-word;
+    background-color: var(--item-bg);
+    box-shadow: var(--shadow-shape) var(--color-shadow);
+    padding: var(--content-padding);
+    margin: var(--content-margin);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent);
+}
+
+#open {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    padding-top: 1rem;
+    max-width: 100%;
+    background-color: var(--item-bg);
+    text-align: center;
+}
+
+#open>a {
+    z-index: 2;
+}
+
+#tag-list {
+    margin: 0.5rem 2rem;
+    list-style-type: disc;
+}
+
+#tag {
+    z-index: 2;
+    margin: 0 0.25rem !important;
+}
+/* Consolidated Mobile Responsive Styles */
+@media (max-width: 900px) {
+  .menu-label {
+    display: flex !important; /* Force visibility on mobile */
+    align-items: center;
+    flex-direction: row; /* Horizontal layout for Icon + "MENU" text */
+  }
+
+  .navbar {
+    display: none; /* Hide menu links by default */
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Show menu when checkbox is checked */
+  .menu-toggle:checked ~ .navbar {
+    display: flex;
+  }
+
+  .navbar a {
+    flex: 1 1 100%;
+    text-align: left;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--bg-2);
+  }
+
+  .navbar .divider {
+    display: none;
+  }
+}
